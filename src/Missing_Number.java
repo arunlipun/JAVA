@@ -4,15 +4,24 @@ public class Missing_Number {
         System.out.println(missing_number(arr));
 
     }
-    static int missing_number(int arr[]){
+//    static int missing_number(int arr[]){
+//
+//        int n=arr.length;
+//        int total=n*(n+1)/2;
+//        int current_sum=0;
+//        for(int i=0;i<arr.length;i++){
+//            current_sum+=arr[i];
+//        }
+//        return total-current_sum;
+//
+//    }
 
-        int n=arr.length;
-        int total=n*(n+1)/2;
-        int current_sum=0;
-        for(int i=0;i<arr.length;i++){
-            current_sum+=arr[i];
+    static int missing_number(int[] arr){
+        int n_xor= arr.length;
+        for(int i=0;i< arr.length;i++){
+            n_xor=n_xor^i;
+            n_xor=n_xor^arr[i];
         }
-        return total-current_sum;
-
+        return n_xor;
     }
 }
