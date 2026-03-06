@@ -4,6 +4,12 @@ public class noof_vowel_consonants {
     public static void main(String[] args) {
         v_c("Arun Mohapatra");
 
+
+//        ==============Remove vowels================
+//        String a="Arun Mohapatra";
+//        String result=a.replaceAll("[aeiouAEIOU]"," ");
+//        System.out.println(result);
+
     }
     static  void v_c(String str){
         String str2=str.toLowerCase();
